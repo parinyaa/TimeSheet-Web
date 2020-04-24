@@ -7,6 +7,8 @@ const routes: Routes = [
     children: [
     {  path: 'attendance', loadChildren: () => import('./modules/attendance/attendance.module')
     .then(m => m.AttendanceModule)  },
+    {  path: 'supervisor', loadChildren: () => import('./modules/attendance-supervisor/attendance-supervisor.module')
+    .then(m => m.AttendanceSupervisorModule)  },
   ], },
 
  ];
