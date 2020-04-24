@@ -1,17 +1,24 @@
+import { MaterialModule } from 'src/app/material.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { AttendanceRoutingModule } from './attendance-routing.module';
 import { AttendanceComponent } from './attendance.component';
-import { MaterialModule } from 'src/app/material.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AddAttendanceDialogComponent } from './add-attendance-dialog/add-attendance-dialog.component';
+import { SharedModule } from 'src/app/shared/shared.module';
+
 
 
 @NgModule({
-  declarations: [AttendanceComponent],
+  declarations: [AttendanceComponent, AddAttendanceDialogComponent],
   imports: [
     CommonModule,
     AttendanceRoutingModule,
-    MaterialModule
-  ]
+    MaterialModule,
+    FormsModule,
+    ReactiveFormsModule,
+    SharedModule
+  ],
+  entryComponents:[AddAttendanceDialogComponent],
 })
 export class AttendanceModule { }

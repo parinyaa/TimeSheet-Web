@@ -1,1 +1,68 @@
-<p>attendance works!</p>
+<div class="page-main">
+<div class="row">
+    <div class="col-6">
+      <div> <a style="font-size: 1.75rem;">Attendance List</a></div>
+    </div>
+    <div class="col-6" style="text-align: right;">
+      <button mat-raised-button class="btn-submit" (click)="openDialogAdd()">
+        <span class="material-icons">library_add</span>
+        View History
+      </button>&nbsp;
+      <button mat-raised-button class="btn-submit" (click)="openDialogAdd()">
+        <span class="material-icons">library_add</span>
+        Add Attendance List
+      </button>&nbsp;
+      <button mat-raised-button class="btn-submit" [routerLink]="['./user-profile']">
+        <span class="material-icons">library_add</span>
+        Profile
+      </button>&nbsp;
+      <button mat-raised-button class="btn-submit" (click)="openDialogAdd()">
+        <span class="material-icons">library_add</span>
+        Time Out
+      </button>
+    </div>
+  </div>
+
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="date">
+      <th mat-header-cell *matHeaderCellDef> Date </th>
+      <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="project">
+      <th mat-header-cell *matHeaderCellDef> Project </th>
+      <td mat-cell *matCellDef="let element"> {{element.project}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="site">
+      <th mat-header-cell *matHeaderCellDef> Site </th>
+      <td mat-cell *matCellDef="let element"> {{element.site}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="task">
+      <th mat-header-cell *matHeaderCellDef> Task </th>
+      <td mat-cell *matCellDef="let element"> {{element.task}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="time1">
+      <th mat-header-cell *matHeaderCellDef> Time-In </th>
+      <td mat-cell *matCellDef="let element"> {{element.time1}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="time2">
+      <th mat-header-cell *matHeaderCellDef> Time-Out </th>
+      <td mat-cell *matCellDef="let element"> {{element.time2}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

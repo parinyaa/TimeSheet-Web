@@ -1,0 +1,138 @@
+<div class="page-main">
+<div class="row headTilteDialog">
+    <h3 mat-dialog-title>User Profile</h3>
+  </div>
+
+    <div mat-dialog-content>
+      <div class="row mt-3">
+        <div class="col-2 mt-2" style="text-align: right;">
+          <mat-label> Name </mat-label>
+        </div>
+        <div class="col-4">
+          <input class="form-control" formControlName="coopCode"
+            [ngClass]="{'is-invalid': submitted && f.coopCode.errors}">
+          <div *ngIf="submitted && f.coopCode.errors" class="invalid-feedback">
+            <div *ngIf="f.coopCode.errors.required" class="text-danger help-block">
+              {{'coop code' | mandatoryfield}}
+            </div>
+          </div>
+          <div *ngIf="submitted && f.coopCode.errors" class="invalid-feedback">
+            <div *ngIf="f.coopCode.errors.whitespace" class="text-danger help-block">
+              {{'coop code' | mandatoryfield}}
+            </div>
+          </div>
+        </div>
+        <div class="col-2 mt-2" style="text-align: right;">
+          <mat-label> Last Name </mat-label>
+        </div>
+        <div class="col-4">
+          <input class="form-control" formControlName="abbreviateName"
+            [ngClass]="{'is-invalid': submitted && f.abbreviateName.errors}">
+          <div *ngIf="submitted && f.abbreviateName.errors" class="invalid-feedback">
+            <div *ngIf="f.abbreviateName.errors.required" class="text-danger help-block">
+              {{'abbreviate name' | mandatoryfield}}
+            </div>
+          </div>
+          <div *ngIf="submitted && f.abbreviateName.errors" class="invalid-feedback">
+            <div *ngIf="f.abbreviateName.errors.whitespace" class="text-danger help-block">
+              {{'abbreviate name' | mandatoryfield}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-2 mt-2" style="text-align: right;">
+          <mat-label> Position </mat-label>
+        </div>
+        <div class="col-4">
+          <input class="form-control" formControlName="engName" [ngClass]="{'is-invalid': submitted && f.engName.errors}">
+          <div *ngIf="submitted && f.engName.errors" class="invalid-feedback">
+            <div *ngIf="f.engName.errors.required" class="text-danger help-block">
+              {{'eng name' | mandatoryfield}}
+            </div>
+          </div>
+          <div *ngIf="submitted && f.engName.errors" class="invalid-feedback">
+            <div *ngIf="f.engName.errors.whitespace" class="text-danger help-block">
+              {{'eng name' | mandatoryfield}}
+            </div>
+          </div>
+        </div>
+        <div class="col-2 mt-2" style="text-align: right;">
+          <mat-label> Project </mat-label>
+        </div>
+        <div class="col-4">
+          <input class="form-control" formControlName="thaiName"
+            [ngClass]="{'is-invalid': submitted && f.thaiName.errors}">
+          <div *ngIf="submitted && f.thaiName.errors" class="invalid-feedback">
+            <div *ngIf="f.thaiName.errors.required" class="text-danger help-block">
+              {{'th name' | mandatoryfield}}
+            </div>
+          </div>
+          <div *ngIf="submitted && f.thaiName.errors" class="invalid-feedback">
+            <div *ngIf="f.thaiName.errors.whitespace" class="text-danger help-block">
+              {{'th name' | mandatoryfield}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-2 mt-2" style="text-align: right;">
+          <mat-label> Birth Of Date </mat-label>
+        </div>
+        <div class="col-4">
+          <input class="form-control" formControlName="contactPerson"
+            [ngClass]="{'is-invalid': submitted && f.contactPerson.errors}">
+          <div *ngIf="submitted && f.contactPerson.errors" class="invalid-feedback">
+            <div *ngIf="f.contactPerson.errors.required" class="text-danger help-block">
+              {{'contact person' | mandatoryfield}}
+            </div>
+          </div>
+          <div *ngIf="submitted && f.contactPerson.errors" class="invalid-feedback">
+            <div *ngIf="f.contactPerson.errors.whitespace" class="text-danger help-block">
+              {{'contact person' | mandatoryfield}}
+            </div>
+          </div>
+        </div>
+        <div class="col-2 mt-2" style="text-align: right;">
+          <mat-label> Age </mat-label>
+        </div>
+        <div class="col-4">
+          <input class="form-control" formControlName="telephone"
+            [ngClass]="{'is-invalid': submitted && f.telephone.errors}">
+          <div *ngIf="submitted && f.telephone.errors" class="invalid-feedback">
+            <div *ngIf="f.telephone.errors.required" class="text-danger help-block">
+              {{'telephone' | mandatoryfield}}
+            </div>
+          </div>
+          <div *ngIf="submitted && f.telephone.errors" class="invalid-feedback">
+            <div *ngIf="f.telephone.errors.whitespace" class="text-danger help-block">
+              {{'telephone' | mandatoryfield}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-2 mt-2" style="text-align: right;">
+        <mat-label> Site </mat-label>
+      </div>
+      <div class="col-4">
+        <input class="form-control" formControlName="email" [ngClass]="{'is-invalid': submitted && f.email.errors}">
+        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+          <div *ngIf="f.email.errors.required" class="text-danger help-block">
+            {{'email' | mandatoryfield}}
+          </div>
+        </div>
+        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+          <div *ngIf="f.email.errors.whitespace" class="text-danger help-block">
+            {{'email' | mandatoryfield}}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div mat-dialog-actions class="mt-3" style="float: right;">
+      <button mat-button type="submit" class="btn-submit">Edit</button>&nbsp;
+      <a mat-raised-button class="btn-cancle"(click)="(false)">Cancel</a>
+    </div>
+</div>

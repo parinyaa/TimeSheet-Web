@@ -5,10 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {path: '',
     children: [
-    {  path: 'attendance', loadChildren: () => import('./modules/attendance/attendance.module')
-    .then(m => m.AttendanceModule)  },
-  ], },
-
+    { path: 'attendance', loadChildren: () => import('./modules/attendance/attendance.module').then(m => m.AttendanceModule)},
+    { path: 'user-profile', loadChildren: () => import('./modules/user-profile/user-profile.module').then(m => m.UserProfileModule)},
+    { path: 'attendance/user-profile', loadChildren: () => import('./modules/user-profile/user-profile.module').then(m => m.UserProfileModule)},
+    
+  ],
+},
  ];
 
 @NgModule({
