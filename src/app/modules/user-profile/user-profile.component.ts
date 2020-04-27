@@ -1,4 +1,6 @@
+import { EditUserProfileDialogComponent } from './edit-user-profile-dialog/edit-user-profile-dialog.component';
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-user-profile',
@@ -11,13 +13,32 @@ export class UserProfileComponent implements OnInit {
   submitted = false;
 
 
-  constructor() { }
+  constructor(
+    public dialog: MatDialog,
+  ) { }
 
   ngOnInit() {
   }
 
 
   get f() { return null; }
+
+  openDialogEdit(){
+    console.log('The dialog was open add');
+    const dialogRef = this.dialog.open(EditUserProfileDialogComponent, {
+      width: '750px',
+      position: {
+        top: '10%',
+      },
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        // this.getCustomer();
+        console.log("Edit Success!")
+      }
+    });
+
+  }
 
   
 }

@@ -11,16 +11,16 @@
         <mat-label>Project</mat-label>
       </div>
       <div class="col-4">
-        <input class="form-control" formControlName="coopCode"
-          [ngClass]="{'is-invalid': submitted && f.coopCode.errors}">
-        <div *ngIf="submitted && f.coopCode.errors" class="invalid-feedback">
-          <div *ngIf="f.coopCode.errors.required" class="text-danger help-block">
-            {{'coop code' | mandatoryfield}}
+        <input class="form-control" formControlName="project"
+          [ngClass]="{'is-invalid': submitted && f.project.errors}">
+        <div *ngIf="submitted && f.project.errors" class="invalid-feedback">
+          <div *ngIf="f.project.errors.required" class="text-danger help-block">
+            {{'Project' | mandatoryfield}}
           </div>
         </div>
-        <div *ngIf="submitted && f.coopCode.errors" class="invalid-feedback">
-          <div *ngIf="f.coopCode.errors.whitespace" class="text-danger help-block">
-            {{'coop code' | mandatoryfield}}
+        <div *ngIf="submitted && f.project.errors" class="invalid-feedback">
+          <div *ngIf="f.project.errors.whitespace" class="text-danger help-block">
+            {{'Project' | mandatoryfield}}
           </div>
         </div>
       </div>
@@ -28,16 +28,16 @@
         <mat-label> Site </mat-label>
       </div>
       <div class="col-4">
-        <input class="form-control" formControlName="abbreviateName"
-          [ngClass]="{'is-invalid': submitted && f.abbreviateName.errors}">
-        <div *ngIf="submitted && f.abbreviateName.errors" class="invalid-feedback">
-          <div *ngIf="f.abbreviateName.errors.required" class="text-danger help-block">
-            {{'abbreviate name' | mandatoryfield}}
+        <input class="form-control" formControlName="site"
+          [ngClass]="{'is-invalid': submitted && f.site.errors}">
+        <div *ngIf="submitted && f.site.errors" class="invalid-feedback">
+          <div *ngIf="f.site.errors.required" class="text-danger help-block">
+            {{'Site' | mandatoryfield}}
           </div>
         </div>
-        <div *ngIf="submitted && f.abbreviateName.errors" class="invalid-feedback">
-          <div *ngIf="f.abbreviateName.errors.whitespace" class="text-danger help-block">
-            {{'abbreviate name' | mandatoryfield}}
+        <div *ngIf="submitted && f.site.errors" class="invalid-feedback">
+          <div *ngIf="f.site.errors.whitespace" class="text-danger help-block">
+            {{'Site' | mandatoryfield}}
           </div>
         </div>
       </div>
@@ -48,16 +48,16 @@
         <mat-label> Task </mat-label>
       </div>
       <div class="col-10">
-        <textarea class="form-control" formControlName="address"
-          [ngClass]="{'is-invalid': submitted && f.address.errors}"></textarea>
-        <div *ngIf="submitted && f.address.errors" class="invalid-feedback">
-          <div *ngIf="f.address.errors.required" class="text-danger help-block">
-            {{'address' | mandatoryfield}}
+        <textarea class="form-control" formControlName="task"
+          [ngClass]="{'is-invalid': submitted && f.task.errors}"></textarea>
+        <div *ngIf="submitted && f.task.errors" class="invalid-feedback">
+          <div *ngIf="f.task.errors.required" class="text-danger help-block">
+            {{'Task' | mandatoryfield}}
           </div>
         </div>
-        <div *ngIf="submitted && f.address.errors" class="invalid-feedback">
-          <div *ngIf="f.address.errors.whitespace" class="text-danger help-block">
-            {{'address' | mandatoryfield}}
+        <div *ngIf="submitted && f.task.errors" class="invalid-feedback">
+          <div *ngIf="f.task.errors.whitespace" class="text-danger help-block">
+            {{'Task' | mandatoryfield}}
           </div>
         </div>
       </div>
