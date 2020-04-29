@@ -1,6 +1,9 @@
+import { RequestAttendanceService } from './../../service/request-attendance.service';
+import { ReqInsertAttendance } from './../../shared/model/requestAttendance';
 import { AddAttendanceDialogComponent } from './add-attendance-dialog/add-attendance-dialog.component';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { MatTableDataSource } from '@angular/material/table';
 
 export interface PeriodicElement {
   date: string;
@@ -28,12 +31,21 @@ export class AttendanceComponent implements OnInit {
 
   constructor(
     public dialog: MatDialog,
+    private reqAttendance: RequestAttendanceService
   ) { }
 
   
 
   ngOnInit() {
+    // this.getAttendance();
   }
+
+  // getAttendance(){
+  //   this.reqAttendance.getAttendance().subscribe((res) => {
+  //     this.dataSource = new MatTableDataSource(res.data);
+  //   })
+  // }
+
 
 
   openDialogAdd(): void {

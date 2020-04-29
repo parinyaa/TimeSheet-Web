@@ -1,6 +1,7 @@
+import { ReqInsertAttendance } from './../../../shared/model/requestAttendance';
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-add-attendance-dialog',
@@ -9,6 +10,7 @@ import { FormBuilder } from '@angular/forms';
 })
 export class AddAttendanceDialogComponent implements OnInit {
 
+  // createAttendance: FormGroup
   submitted = false;
 
   constructor(
@@ -19,7 +21,19 @@ export class AddAttendanceDialogComponent implements OnInit {
   ngOnInit() {
   }
 
-  get f() { return null; }
+    get f() { return null; }
+
+    // setFormAttendance(){
+    //   this.createAttendance = this._FormBuild.group({
+    //     task:['',Validators.required]
+    //   })
+    // }
+
+    onSave(){
+      // console.log(this.createAttendance);
+      // let requestInsert = new ReqInsertAttendance();
+      // requestInsert.task = this.createAttendance.controls['task'].value;
+    }
 
 
   canCle(){

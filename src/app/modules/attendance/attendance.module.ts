@@ -1,3 +1,4 @@
+import { RequestAttendanceService } from './../../service/request-attendance.service';
 import { MaterialModule } from 'src/app/material.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -20,5 +21,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
     SharedModule
   ],
   entryComponents:[AddAttendanceDialogComponent],
+  providers: [
+    RequestAttendanceService
+  ],
 })
 export class AttendanceModule { }
