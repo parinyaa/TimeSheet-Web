@@ -50,7 +50,7 @@ export class AttendanceSupervisorComponent implements OnInit {
   onDialogAssign() {
     console.log('open dialog Add attendance');
     const dialogRef = this.dialog.open(DialogAssignComponent, {
-      width: '800px',
+      width: '600px',
       position: {
         top: '5%'
       },
