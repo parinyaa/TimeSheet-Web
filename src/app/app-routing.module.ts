@@ -10,7 +10,8 @@ const routes: Routes = [
     { path: 'attendance/user-profile', loadChildren: () => import('./modules/user-profile/user-profile.module').then(m => m.UserProfileModule)},
     { path: 'supervisor', loadChildren: () => import('./modules/attendance-supervisor/attendance-supervisor.module')
     .then(m => m.AttendanceSupervisorModule)},
-    
+    { path: 'supervisor/user-profile', loadChildren: () => import('./modules/user-profile/user-profile.module')
+    .then(m => m.UserProfileModule)},
   ],
 },
  ];
