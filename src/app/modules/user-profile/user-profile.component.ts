@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { EditUserProfileDialogComponent } from './edit-user-profile-dialog/edit-user-profile-dialog.component';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
@@ -15,6 +16,7 @@ export class UserProfileComponent implements OnInit {
 
   constructor(
     public dialog: MatDialog,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -38,6 +40,10 @@ export class UserProfileComponent implements OnInit {
       }
     });
 
+  }
+
+  back(){
+    this.router.navigate(['/attendance']);
   }
 
   

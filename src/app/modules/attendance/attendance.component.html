@@ -5,23 +5,26 @@
     </div>
     <div class="col-6" style="text-align: right;">
       <button mat-raised-button class="btn-submit" (click)="openDialogAdd()">
-        <span class="material-icons">library_add</span>
+        <mat-icon>library_books</mat-icon>
         View History
       </button>&nbsp;
       <button mat-raised-button class="btn-submit" (click)="openDialogAdd()">
-        <span class="material-icons">library_add</span>
+        <mat-icon>assessment</mat-icon>
         Add Attendance List
       </button>&nbsp;
       <button mat-raised-button class="btn-submit" [routerLink]="['./user-profile']">
-        <span class="material-icons">library_add</span>
+        <mat-icon>supervisor_account</mat-icon>
         Profile
       </button>&nbsp;
-      <button mat-raised-button class="btn-submit" (click)="openDialogAdd()">
-        <span class="material-icons">library_add</span>
-        Time Out
-      </button>
     </div>
-  </div>
+  </div><br>
+  
+  <div style="text-align: right;">
+    <button mat-raised-button class="btn-submit" (click)="openDialogAdd()">
+        <mat-icon>work_outline</mat-icon>
+        Time out
+    </button>
+  </div><br>
 
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
